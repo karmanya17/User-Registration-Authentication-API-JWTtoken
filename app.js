@@ -13,6 +13,7 @@ app.use("/",express.static(path.join(__dirname,"public")));
 app.use(bodyParser.json());
 const jwt_secret="asdfghjkl";
 
+// Route for logging in the user
 app.post("/api/login",async(req,res)=>{
   const{username,password}=req.body;
 
